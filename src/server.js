@@ -1,5 +1,3 @@
-// src/app.js
-
 const express = require('express');
 const path = require('path');
 const routes = require('./routes'); // Import the route registry
@@ -38,19 +36,36 @@ app.get(routes.about, (req, res) => {
     res.render('about', data);
 });
 
-app.get(routes.users, (req, res) => {
+app.get(routes.aiInsights, (req, res) => {
     const data = {
-        title: 'Users',
-        message: 'List of Users',
-        users: [
-            { name: 'Alice', age: 25 },
-            { name: 'Bob', age: 30 },
-            { name: 'Charlie', age: 35 },
-            { name: 'Keith', age: 49 }
-
-        ]
+        title: 'AI Insights',
+        message: 'Explore insights into Artificial Intelligence.'
     };
-    res.render('users', data);
+    res.render('ai-insights', data);
+});
+
+app.get(routes.ufoStories, (req, res) => {
+    const data = {
+        title: 'UFO Stories',
+        message: 'Discover fascinating UFO stories.'
+    };
+    res.render('ufo-stories', data);
+});
+
+app.get(routes.news, (req, res) => {
+    const data = {
+        title: 'News',
+        message: 'Catch up on the latest news.'
+    };
+    res.render('news', data);
+});
+
+app.get(routes.contact, (req, res) => {
+    const data = {
+        title: 'Contact',
+        message: 'Get in touch with us.'
+    };
+    res.render('contact', data);
 });
 
 // Handle 404 - Page Not Found

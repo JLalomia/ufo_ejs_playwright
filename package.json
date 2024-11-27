@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:debug": "playwright test --debug",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
     "start": "node ./src/server.js"
   },
   "keywords": [],
